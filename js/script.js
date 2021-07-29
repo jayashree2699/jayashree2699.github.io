@@ -1,3 +1,4 @@
+let userid='';
 function login(){
 
     let username='';
@@ -15,6 +16,7 @@ function login(){
                 userDetails = userResponse;
                 userDetails.find(user =>{
                     if(username == user.username && password == user.password ){
+                        userid = user.id;
                         flag =true;
                     }
                 });
